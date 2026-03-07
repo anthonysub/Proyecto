@@ -21,3 +21,5 @@ def crear_usuario(usuario: UsuarioCreate):
 @app.get("/usuarios/{nombre}")
 def test(nombre: str):
     return {"nombre": nombre}
+
+print("xd")
