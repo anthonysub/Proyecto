@@ -16,3 +16,10 @@ def test_suma():
     assert response.status_code == 200
     assert response.json()["resultado"] == 15.0
     print(f"\nRespuesta de la API: {response.json()}")
+
+
+def test_division():
+    response = client.get("/division?num1=10&num2=5")
+    assert response.status_code == 200
+    assert response.json()["resultado"] == 2.0
+    print(f"\nRespuesta de la API: {response.json()}")
