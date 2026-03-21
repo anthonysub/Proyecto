@@ -33,4 +33,13 @@ def resta(
     num2: float = Query(..., description="Segundo número"),
     
 ):
-     return {"operacion": "La resta es", "num1": num1, "num2": num2, "resultado": num1 - num2}
+    """
+    Realiza la resta de dos números.
+    
+    Parámetros:
+    - num1: Minuendo (primer número)
+    - num2: Sustraendo (segundo número)
+    
+    Retorna el resultado de num1 - num2
+    """
+    return {"operacion": "resta", "num1": num1, "num2": num2, "resultado": num1 - num2}
