@@ -21,7 +21,16 @@ def suma(
 def division(
     num1: float = Query(..., description="Primer número"),
     num2: float = Query(..., description="Segundo número"),
+    
 ):
-    if num2 == 0:
+    if num2 == 0 or num1 == 0:
         return {"error": "No se puede dividir por cero"}
     return {"operacion": "division", "num1": num1, "num2": num2, "resultado": num1 / num2}
+
+@router.get("/resta")
+def resta(
+    num1: float = Query(..., description="Primer número"),
+    num2: float = Query(..., description="Segundo número"),
+    
+):
+     return {"operacion": "La resta es", "num1": num1, "num2": num2, "resultado": num1 - num2}
