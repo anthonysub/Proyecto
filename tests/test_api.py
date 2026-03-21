@@ -23,3 +23,9 @@ def test_division():
     assert response.status_code == 200
     assert response.json()["resultado"] == 2.0
     print(f"\nRespuesta de la API: {response.json()}")
+
+def test_resta():
+    response = client.get("/resta?num1=10&num2=5")
+    assert response.status_code == 200
+    assert response.json()["resultado"] == 5.0
+    print(f"\nRespuesta de la API: {response.json()}")
