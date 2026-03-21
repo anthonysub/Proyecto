@@ -9,3 +9,6 @@ def multiply(
     num2: float = Query(..., description="Segundo número"),
 ):
     return {"operation": "multiply", "num1": num1, "num2": num2, "result": num1 * num2}
+
+
+"""hola"""
